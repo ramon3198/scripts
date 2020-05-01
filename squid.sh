@@ -1,11 +1,4 @@
-        apt-get update
-	apt-get install -y squid curl nano sysv-rc-conf ulatency ulatencyd
-	
-	cd /etc/ssh/
-
-	echo "$(sed 's/22/443/g' sshd_config)" > sshd_config
-	echo "" >> sshd_config	
-	echo "Port 22" >> sshd_config	
+      
 	
 	ip=$(wget -qO - icanhazip.com)
 	
@@ -42,11 +35,9 @@
 	echo "http_access deny all" >> /etc/squid/squid.conf
 	echo "cache deny all" >> /etc/squid/squid.conf
 
-	sysv-rc-conf squid on
-
 	service squid restart
 
-	service ssh restart
+	
 	
 	clear
 	echo "Servidor/Proxy"
