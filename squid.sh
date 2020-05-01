@@ -1,4 +1,4 @@
-  apt-get update
+        apt-get update
 	apt-get install -y squid curl nano sysv-rc-conf ulatency ulatencyd
 	
 	cd /etc/ssh/
