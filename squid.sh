@@ -38,9 +38,3 @@
 	service squid restart
 
 	
-	
-	clear
-	echo "Servidor/Proxy"
-	echo "$ip"
-	echo "PUERTO: 80, 8080, 8799 e 3128"
-	echo "PUERTO SSH: 443"
